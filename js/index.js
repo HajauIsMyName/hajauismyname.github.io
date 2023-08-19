@@ -1,6 +1,6 @@
-consoleText(["Welcome to my web 👋", "I'm Lâm Hậu"], "text", ["cyan", "gold"]);
+renderText(["Welcome to my web 👋", "I'm Lâm Hậu"], "text", ["cyan", "gold"]);
 
-function consoleText(words, id, colors) {
+function renderText(words, id, colors) {
     if (colors === undefined) colors = ["#fff"];
     var visible = true;
     var con = document.getElementById("console");
@@ -10,7 +10,6 @@ function consoleText(words, id, colors) {
     var target = document.getElementById(id)
     target.setAttribute("style", "color:" + colors[0])
     window.setInterval(function () {
-
         if (letterCount === 0 && waiting === false) {
             waiting = true;
             target.innerHTML = words[0].substring(0, letterCount)
@@ -38,11 +37,11 @@ function consoleText(words, id, colors) {
     }, 120)
     window.setInterval(function () {
         if (visible === true) {
-            con.className = "console-underscore hidden"
+            con.className = "text-underscore hidden"
             visible = false;
 
         } else {
-            con.className = "console-underscore"
+            con.className = "text-underscore"
 
             visible = true;
         }

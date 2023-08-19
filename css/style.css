@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@600;700&family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@600;700&family=Khula:wght@700&family=Poppins:wght@600&display=swap");
 
 * {
@@ -68,13 +67,7 @@ a:hover {
     display: none;
 }
 
-#check {
-    display: none;
-}
-
 .container {
-    display: flex;
-    justify-content: center;
     margin: 30vh auto;
     width: 50%;
 }
@@ -84,7 +77,12 @@ a:hover {
     align-items: center;
 }
 
-.console-text {
+
+.hidden {
+    opacity: 0;
+}
+
+.textBox {
     background-color: #3f3f3f;
     opacity: 0.9;
     font-family: "Khula", sans-serif;
@@ -94,17 +92,29 @@ a:hover {
     border-radius: 20px;
 }
 
-.console-underscore {
+.text-underscore {
     display: inline-block;
     position: relative;
     top: -0.14em;
-    left: 10px;
 }
 
 .avatar {
     border-radius: 50%;
     height: 150px;
     margin: 40px;
+    transform: deg(-360deg);
+    transition: ease-in-out 1s;
+}
+
+.avatar:hover {
+    height: calc(150px + 5vh);
+    transform: rotate(360deg);
+    transition: ease-in-out 1s;
+}
+
+
+#check {
+    display: none;
 }
 
 
@@ -125,8 +135,8 @@ a:hover {
     }
 
     ul {
-        position: fixed;
-        width: 100%;
+        position: absolute;
+        width: 100vw;
         height: 100vh;
         background-color: #3f3f3f;
         top: 80px;
