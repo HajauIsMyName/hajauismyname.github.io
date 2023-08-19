@@ -42,7 +42,6 @@ function renderText(words, id, colors) {
 
         } else {
             con.className = "text-underscore"
-
             visible = true;
         }
     }, 400)
