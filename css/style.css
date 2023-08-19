@@ -78,24 +78,21 @@ a:hover {
 }
 
 
-.hidden {
-    opacity: 0;
-}
-
-.textBox {
+.thanksBox {
     background-color: #3f3f3f;
-    opacity: 0.9;
+    opacity: 0.8;
     font-family: "Khula", sans-serif;
     color: white;
     display: block;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .text-underscore {
     display: inline-block;
     position: relative;
     top: -0.14em;
+    animation: blink 1s infinite;
 }
 
 .avatar {
@@ -164,5 +161,19 @@ a:hover {
 
     #check:checked~ul {
         left: 0;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
     }
 }
