@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@600;700&family=Khula:wght@700&family=Poppins:wght@600&display=swap");
 
-:root {
-    --main-color: cyan;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -56,7 +52,7 @@ nav ul li a {
 
 .active,
 a:hover {
-    color: var(--main-color);
+    color: cyan;
     background-color: #3f3f3f;
     transition: 0.5s;
 }
@@ -74,49 +70,6 @@ a:hover {
 #check {
     display: none;
 }
-
-.container {
-    margin: 30vh auto;
-    width: 50%;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-}
-
-
-.thanksBox {
-    background-color: #3f3f3f;
-    opacity: 0.8;
-    font-family: "Khula", sans-serif;
-    color: white;
-    display: block;
-    padding: 20px;
-    border-radius: 40px;
-}
-
-.text-underscore {
-    display: inline-block;
-    position: relative;
-    top: -0.14em;
-    animation: blink 1s infinite;
-}
-
-.avatar {
-    border-radius: 50%;
-    height: 150px;
-    margin: 40px;
-    transform: deg(-360deg);
-    transition: ease-in-out 1s;
-}
-
-.avatar:hover {
-    height: calc(150px + 5vh);
-    transform: rotate(360deg);
-    transition: ease-in-out 1s;
-}
-
 
 @media (max-width: 952px) {
     .navbar-logo {
@@ -157,26 +110,12 @@ a:hover {
 
     a.active,
     a:hover {
-        color: var(--main-color);
+        color: cyan;
         background-color: #333;
         transition: 0.5s;
     }
 
     #check:checked~ul {
         left: 0;
-    }
-}
-
-@keyframes blink {
-
-    0%,
-    50%,
-    100% {
-        opacity: 1;
-    }
-
-    25%,
-    75% {
-        opacity: 0;
     }
 }
