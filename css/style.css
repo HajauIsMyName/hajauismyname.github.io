@@ -22,6 +22,10 @@ body {
     min-height: 100vh;
 }
 
+nav {
+    font-family: "Hadijet", sans-serif;
+}
+
 .navbar nav {
     background-color: #333;
     height: 80px;
@@ -117,6 +121,10 @@ a:hover {
     transition: ease-in-out 1s;
 }
 
+.about {
+    font-family: "Poiret", sans-serif;
+}
+
 .about .card {
     background-color: rgba(63, 63, 63, 0.8);
     max-width: 450px;
@@ -152,43 +160,34 @@ a:hover {
 }
 
 .contact .card {
-    width: 350px;
-    height: fit-content;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: center;
     background-color: rgba(63, 63, 63, 0.8);
-    margin-top: 10px;
-}
-
-.contact .card-content {
-    margin: 15px 2px;
-}
-
-.contact .card-avatar img {
-    height: auto;
-    width: 120px;
-    border-radius: 50%;
-    display: block;
-    margin-left: auto;
+    max-width: 450px;
+    text-align: center;
+    margin-top: 15vh;
     margin-right: auto;
-    margin-bottom: 5px;
+    margin-left: auto;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.contact .card-name {
-    font-size: 1.25em;
+.contact img {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.contact .name {
+    font-size: 1.2em;
     font-weight: bolder;
-    letter-spacing: 1px;
 }
 
-.contact .card-job-title {
+.contact .job-title {
+    height: 20px;
     font-size: 0.65em;
     font-weight: bolder;
     color: gray;
-    margin-top: -2px;
 }
 
-.contact .card-job-description {
+.contact .job-description {
     font-size: 0.7em;
     color: gray;
     margin: 10px 30px 20px;
@@ -201,53 +200,52 @@ a:hover {
     justify-content: space-around;
 }
 
-.contact .card-icons button {
-    width: 25px;
+.contact .icons button {
+    margin-top: 10px;
     height: 25px;
     border: none;
-    background: none;
     font-size: 1em;
+    background: none;
 }
 
-.contact i:hover {
-    color: #58a497;
-    transition: 0.5s;
+.contact .icons button:hover {
+    color: var(--main-color);
 }
 
-.contact .card-button {
+.contact .button button {
     width: 130px;
     height: 40px;
     border-radius: 10px;
     font-weight: bolder;
 }
 
-.contact .card-button {
+.contact .button {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     margin: 20px 30px 0px;
 }
 
-.contact .card-message {
-    background-color: #ededed;
+.contact .button .message {
+    background: #ededed;
     border: 2px solid #000;
 }
 
-.contact .card-connect {
+.contact .connect {
     background-color: #000;
     color: #ededed;
     border: none;
 }
 
-.contact .card-connect:hover {
+.contact button .connect:hover {
     letter-spacing: 1px;
     transition: 0.5s;
 }
 
-.contact .card-message:hover {
+.contact button .message:hover {
     letter-spacing: 1px;
     transition: 0.5s;
-    background-color: rgba(88, 164, 151, 0.5);
+    background: rgba(88, 164, 151, 0.5);
 }
 
 @media (max-width: 952px) {
@@ -299,27 +297,8 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .contact .card {
-        width: 100vw;
-        border-radius: 0px;
-    }
-
-    .contact .card-button {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact .card-button button {
-        width: 250px;
-    }
-
-    .contact button .card-connect {
-        margin-top: 10px;
-    }
-}
-
 @keyframes blink {
+
     0%,
     50%,
     100% {
