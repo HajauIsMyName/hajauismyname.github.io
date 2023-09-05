@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@600;700&family=Khula:wght@700&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 
 :root {
     --main-color: cyan;
@@ -10,7 +12,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -85,7 +86,6 @@ a:hover {
     align-items: center;
 }
 
-
 .home .thanksBox {
     background-color: #3f3f3f;
     opacity: 0.8;
@@ -147,6 +147,109 @@ a:hover {
     font-size: 20px;
 }
 
+.contact {
+    font-family: "Nunito", sans-serif;
+}
+
+.contact .card {
+    width: 350px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(63, 63, 63, 0.8);
+    margin-top: 10px;
+}
+
+.contact .card-content {
+    margin: 15px 2px;
+}
+
+.contact .card-avatar img {
+    height: auto;
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.contact .card-name {
+    font-size: 1.25em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.contact .card-job-title {
+    font-size: 0.65em;
+    font-weight: bolder;
+    color: gray;
+    margin-top: -2px;
+}
+
+.contact .card-job-description {
+    font-size: 0.7em;
+    color: gray;
+    margin: 10px 30px 20px;
+}
+
+.contact .icons {
+    margin: 0px 30px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact .card-icons button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: none;
+    font-size: 1em;
+}
+
+.contact i:hover {
+    color: #58a497;
+    transition: 0.5s;
+}
+
+.contact .card-button {
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.contact .card-button {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px 30px 0px;
+}
+
+.contact .card-message {
+    background-color: #ededed;
+    border: 2px solid #000;
+}
+
+.contact .card-connect {
+    background-color: #000;
+    color: #ededed;
+    border: none;
+}
+
+.contact .card-connect:hover {
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.contact .card-message:hover {
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background-color: rgba(88, 164, 151, 0.5);
+}
+
 @media (max-width: 952px) {
     .navbar .navbar-logo {
         font-size: 30px;
@@ -193,6 +296,26 @@ a:hover {
 
     #check:checked~ul {
         left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact .card {
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .contact .card-button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .card-button button {
+        width: 250px;
+    }
+
+    .contact button .card-connect {
+        margin-top: 10px;
     }
 }
 
