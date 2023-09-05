@@ -181,10 +181,9 @@ a:hover {
 }
 
 .contact .job-title {
-    height: 20px;
-    font-size: 0.65em;
+    font-size: 0.7em;
     font-weight: bolder;
-    color: gray;
+    color: var(--main-color);
 }
 
 .contact .job-description {
