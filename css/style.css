@@ -21,13 +21,13 @@ body {
     min-height: 100vh;
 }
 
-nav {
+.navbar nav {
     background-color: #333;
     height: 80px;
     width: 100vw;
 }
 
-.navbar-logo {
+.navbar .navbar-logo {
     color: #fff;
     font-size: 35px;
     line-height: 80px;
@@ -35,18 +35,18 @@ nav {
     font-weight: bold;
 }
 
-nav ul {
+.navbar nav ul {
     float: right;
     margin-right: 20px;
 }
 
-nav ul li {
+.navbar nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 15px;
 }
 
-nav ul li a {
+.navbar nav ul li a {
     color: white;
     font-size: 17px;
     text-transform: uppercase;
@@ -54,14 +54,14 @@ nav ul li a {
     padding: 7px 13px;
 }
 
-.active,
+.navbar .active,
 a:hover {
     color: var(--main-color);
     background-color: #3f3f3f;
     transition: 0.5s;
 }
 
-.checkbtn {
+.navbar .checkbtn {
     font-size: 30px;
     color: white;
     float: right;
@@ -75,18 +75,18 @@ a:hover {
     display: none;
 }
 
-.container {
+.home .container {
     margin: 30vh auto;
     width: 50%;
 }
 
-.center {
+.home .center {
     display: flex;
     align-items: center;
 }
 
 
-.thanksBox {
+.home .thanksBox {
     background-color: #3f3f3f;
     opacity: 0.8;
     font-family: "Khula", sans-serif;
@@ -96,14 +96,14 @@ a:hover {
     border-radius: 40px;
 }
 
-.text-underscore {
+.home .text-underscore {
     display: inline-block;
     position: relative;
     top: -0.14em;
     animation: blink 1s infinite;
 }
 
-.avatar {
+.home .avatar {
     border-radius: 50%;
     height: 150px;
     margin: 40px;
@@ -111,30 +111,59 @@ a:hover {
     transition: ease-in-out 1s;
 }
 
-.avatar:hover {
+.home .avatar:hover {
     height: calc(150px + 5vh);
     transform: rotate(360deg);
     transition: ease-in-out 1s;
 }
 
+.about .card {
+    background-color: rgba(63, 63, 63, 0.8);
+    max-width: 450px;
+    text-align: center;
+    margin-top: 15vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.about .card-avatar {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.about .card-title {
+    color: var(--main-color);
+}
+
+.about .card-about {
+    text-align: left;
+    color: white;
+}
+
+.about .icon {
+    padding: 10px;
+    font-size: 20px;
+}
 
 @media (max-width: 952px) {
-    .navbar-logo {
+    .navbar .navbar-logo {
         font-size: 30px;
         padding-left: 50px;
     }
 
-    nav ul li a {
+    .navbar nav ul li a {
         font-size: 16px;
     }
 }
 
 @media (max-width: 858px) {
-    .checkbtn {
+    .navbar .checkbtn {
         display: block;
     }
 
-    ul {
+    .navbar ul {
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -145,17 +174,17 @@ a:hover {
         transition: all 0.5s;
     }
 
-    nav ul li {
+    .navbar nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    nav ul li a {
+    .navbar nav ul li a {
         font-size: 20px;
     }
 
-    a.active,
+    .navbar a.active,
     a:hover {
         color: var(--main-color);
         background-color: #333;
@@ -168,7 +197,6 @@ a:hover {
 }
 
 @keyframes blink {
-
     0%,
     50%,
     100% {
